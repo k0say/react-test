@@ -7,7 +7,7 @@ var style = {
   },
 };
 
-class Square extends React.Component {
+class Child extends React.Component {
   constructor(props)  {
     super(props);
     this.state = {
@@ -25,4 +25,4 @@ class Square extends React.Component {
   }
 }
 
-export default Square;
+export default Child;

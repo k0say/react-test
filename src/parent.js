@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
-import Square from './child.js';
+import Child from './child.js';
 
-class First extends React.Component {
+class Parent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,9 +16,9 @@ class First extends React.Component {
     this.setState({ squares: squares });
   }
 
-  renderSquare(i) {
+  renderChild(i) {
     return (
-      <Square
+      <Child
         value={this.state.squares[i]}
         onClick={() => {
           this.handleClick(i);
@@ -28,21 +28,21 @@ class First extends React.Component {
   }
 
   render() {
-    const status = 'This is the status'; 
+    const status = 'This is the status';
     return (
       <div>
         <div>{status}</div>
-        <br/>
+        <br />
         <div>{JSON.stringify(this.state.squares)}</div>
-        <br/>
+        <br />
         <div>
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
+          {this.renderChild(0)}
+          {this.renderChild(1)}
+          {this.renderChild(2)}
         </div>
       </div>
     );
   }
 }
 
-export default First;
+export default Parent;

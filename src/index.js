@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import First from './first.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Parent from './parent.js';
 
-ReactDOM.render(<First />, document.getElementById("root"));
+ReactDOM.render(<Parent />, document.getElementById('root'));
